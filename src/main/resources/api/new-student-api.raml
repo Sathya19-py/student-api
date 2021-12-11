@@ -1,0 +1,36 @@
+#%RAML 1.0
+title: new-student-api
+description: sample student project
+
+/getStudents:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "SId" : 420,
+                "SName" : "Sathyam",
+                "SCourse" : "MCA"
+              }
+
+/addStudent:
+  post:
+    body:
+      application/json:
+        example:
+          {
+            "SId" : 420,
+            "SName" : "Sathyam",
+            "SCourse" : "MCA"
+          }
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              {
+                "status code" : 201,
+                "message" : "Record Inserted"
+              }
